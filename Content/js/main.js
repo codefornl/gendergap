@@ -8,9 +8,6 @@ var main = {
         this.domEvents();
         $('.diffpercent').text(main.percent);
     },
-    initAccount: function () {
-
-    },
     domEvents: function () {
         $('.calculator button').click(main.showResult);
         $('.calculator .gender').click(function () {
@@ -25,6 +22,12 @@ var main = {
             $('.diagram .active').removeClass('active');
             gender = self.attr('data-gender');
             $('.result-diagram.' + gender).addClass('active');
+        });
+        $('.share').click(function () {
+            var title = $(".title.step2").text();
+            var description = $(".info p").text();
+
+            main.shareOverrideOGMeta(title, description);
         });
     },
     showResult: function () {
@@ -44,13 +47,12 @@ var main = {
             womanSalary[key] = intValue * (100 - main.percent) / 100;
         });
         var difference = main.calculateDifference(chosenRanges);
-        var avg = main.getAvg(chosenRanges);
 
         // your salary
         $(".result-diagram.active .salary-name").text("Your Salary");
         $(".result-diagram.active .salary").text(main.convertArrayToString(chosenRanges));
-        $(".title .salary").text(difference);
-        $(".title .salary-real").text(avg);
+        $(".title .salary").text(main.convertArrayToString(difference));
+        $(".title .salary-real").text(main.convertArrayToString(chosenRanges));
 
         othersSalary = womanSalary;
 
@@ -91,10 +93,8 @@ var main = {
         }
     },
     calculateDifference: function (arr) {
-        sum = arr.reduce(function (a, b) { return a + b; });
-        avg = sum / arr.length;
-
-        return avg * main.percent / 100;
+        arr = arr.map(function (a) { return a * main.percent / 100; });
+        return arr;
     },
     getAvg: function (arr) {
         sum = arr.reduce(function (a, b) { return a + b; });
@@ -140,6 +140,21 @@ var main = {
         setTimeout(function () {
             $('.title.step2').addClass('active');
         }, 650);
+    },
+    shareOverrideOGMeta: function (overrideTitle, overrideDescription) {
+        FB.ui({
+            method: 'share_open_graph',
+            action_type: 'og.likes',
+            action_properties: JSON.stringify({
+                object: {
+                    'og:title': overrideTitle,
+                    'og:description': overrideDescription
+                }
+            })
+        },
+            function (response) {
+                // Action after response
+            });
     }
 };
 var account = {
