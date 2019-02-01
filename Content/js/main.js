@@ -77,7 +77,7 @@ var main = {
 
         setTimeout(function () {
             main.showSecondDiagram();
-        }, 4500);
+        }, 4000);
     },
     setFimaleDiagramWidth: function () {
         var width = 100 - main.percent;
@@ -123,10 +123,10 @@ var main = {
     },
     showSecondDiagram: function () {
         $(".result-diagram:not(.active)").addClass("opacity");
-        main.changeText();
+        $(".result-diagram:not(.active) .result-inner").addClass("animate").removeClass('stopanimation');
         setTimeout(function () {
-            $(".result-diagram:not(.active) .result-inner").addClass("animate").removeClass('stopanimation');
-        }, 600);
+            main.changeText();
+        }, 2500);
     },
     changeText: function () {
         $('.title.step1').removeClass('active');

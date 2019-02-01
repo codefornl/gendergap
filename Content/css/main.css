@@ -1321,9 +1321,11 @@ p {
     opacity: 0;
     transition: 1s; }
   .result-inner .salary-name {
-    transition-delay: 1.4s; }
+    transition-delay: 1.4s;
+    line-height: 1.4; }
   .result-inner .salary {
-    transition-delay: 2s; }
+    transition-delay: 2s;
+    line-height: 1.4; }
 
 .result-inner.animate {
   width: 100%; }
@@ -1481,6 +1483,9 @@ input {
   .buttons-wrapper button {
     display: inline-block; }
 
+* {
+  line-height: 1.6; }
+
 header {
   background: #004a91;
   height: 226px;
@@ -1518,7 +1523,7 @@ header {
       text-align: right; }
       header .stats-wrapper .stats span {
         display: block;
-        font-weight: 300; }
+        font-weight: 100; }
         header .stats-wrapper .stats span:first-child {
           font-weight: bold; }
 
@@ -1578,7 +1583,8 @@ section {
     padding: 15px 0;
     border: none;
     position: relative;
-    outline: none; }
+    outline: none;
+    background: white; }
   section.calculator .select-wrapper {
     position: relative; }
     section.calculator .select-wrapper:after {
@@ -1662,7 +1668,8 @@ section {
         height: 44px;
         padding: 0 12px;
         background: #f0f0f0;
-        overflow: hidden; }
+        overflow: hidden;
+        line-height: 1.4; }
     section.result .diagram .result-diagram.active .result-wrapper .result-inner {
       background: #004a91; }
       section.result .diagram .result-diagram.active .result-wrapper .result-inner span {
@@ -1712,12 +1719,16 @@ footer .flex {
   height: 75px;
   align-items: center;
   justify-content: space-between; }
-  footer .flex a {
+  footer .flex .founded {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px; }
+  footer .flex a, footer .flex p {
     color: #282828;
     font-size: 14px; }
-    footer .flex a img {
-      width: 36%;
-      float: right; }
+    footer .flex a img, footer .flex p img {
+      width: 103px; }
 
 .icon {
   height: 42px;
