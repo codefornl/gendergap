@@ -1716,7 +1716,8 @@ footer .flex {
     color: #282828;
     font-size: 14px; }
     footer .flex a img {
-      height: 55px; }
+      width: 36%;
+      float: right; }
 
 .icon {
   height: 42px;
