@@ -1,0 +1,43 @@
+lang: en
+title: "The Global Gender Gap, Georgia"
+
+meta:
+  type: "website"
+  title: "Gender pay gap; New report says it's much worse than you've heard"
+  description: "In Georgia, a woman earns on average 50% less than a man"
+twitter:
+  card: "summary"
+facebook:
+  app_id: 462436390956052
+gap:
+  tagline: "The Global Gender Gap, 2018"
+  country: GEORGIA
+  rank: rank 99
+  total: out of 149 countries
+calculator:
+  tagline: Explore inequality of income
+  button: Get results
+  gender:
+    tagline: What is your gender?
+    male: man
+    female: woman
+  salary:
+    tagline: How much do you make per month?
+    currency: GEL
+    more: "&lt;"
+    options:
+      - 600-800
+      - 800-1000
+      - 1000-1200
+      - 1200-1600
+      - 1600-2000
+      - 2000-5000
+      - 2500
+share: Share
+footer:
+  about: About
+  funded_by: Funded by
+  funder:
+    name: Civic Signal
+    logo: "/Content/icons/civicSIGNAL_logo.svg"
+    url: "https://www.civicsignal.com/"

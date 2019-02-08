@@ -1,0 +1,43 @@
+lang: nl
+title: "Inkomensverschillen, Georgia"
+
+meta:
+  type: "website"
+  title: "Inkomensverschillen; nieuw rapport toont aan dat het erger is dan verwacht"
+  description: "In Georgia verdient een vrouw gemiddeld 50% minder dan een man"
+twitter:
+  card: "summary"
+facebook:
+  app_id: 462436390956052
+gap:
+  tagline: "Inkomensverschillen, 2018"
+  country: GEORGIA
+  rank:  99ste
+  total: van 149 landen
+calculator:
+  tagline: Ontdek de inkomensgelijkheid
+  button: "Resultaat ophalen"
+  gender:
+    tagline: "Geslacht:"
+    male: man
+    female: woman
+  salary:
+    tagline: "Maandelijks inkomen:"
+    currency: GEL
+    more: "&lt;"
+    options:
+      - 600-800
+      - 800-1000
+      - 1000-1200
+      - 1200-1600
+      - 1600-2000
+      - 2000-5000
+      - "2500"
+share: Delen
+footer:
+  about: Over
+  funded_by: Gemaakt door
+  funder:
+    name: Civic Signal
+    logo: "/Content/icons/civicSIGNAL_logo.svg"
+    url: "https://www.civicsignal.com/"

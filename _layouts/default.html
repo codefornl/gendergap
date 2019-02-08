@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body data-percent="50">
+    <div class="content-wrapper">
+        {% include header.html %}
+        {{ content }}
+        {% include footer.html %}
+    </div>
+    {% include script.html %}
+</body>
+</html>
